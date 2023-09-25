@@ -153,7 +153,7 @@ const config = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: "node",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -195,7 +195,11 @@ const config = {
 
   // Indicates whether each individual test should be reported during the run
   verbose: true,
-
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  // reporters: [
+  //   "default",
+  //   "jest-image-snapshot/src/outdated-snapshot-reporter.js"
+  // ]
   // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
   // watchPathIgnorePatterns: [],
 
