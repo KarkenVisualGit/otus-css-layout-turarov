@@ -16,9 +16,9 @@ const config = {
 
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
-
+  collectCoverage: true,
   // Indicates whether the coverage information should be collected while executing the test
-  // collectCoverage: false,
+  coverageDirectory: "coverage",
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   // collectCoverageFrom: undefined,
@@ -41,6 +41,14 @@ const config = {
   //   "lcov",
   //   "clover"
   // ],
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: -10,
+    },
+  },
 
   // An object that configures minimum threshold enforcement for coverage results
   // coverageThreshold: undefined,
@@ -186,7 +194,7 @@ const config = {
   // unmockedModulePathPatterns: undefined,
 
   // Indicates whether each individual test should be reported during the run
-  // verbose: undefined,
+  verbose: true,
 
   // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
   // watchPathIgnorePatterns: [],
