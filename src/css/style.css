@@ -27,7 +27,7 @@ footer {
 .title-img {
   display: flex;
   background-image: url(/src/picture/main_image.webp);
-  background-size:contain;
+  background-size: contain;
   background-position: 50%;
   background-repeat: no-repeat;
   min-width: 460px;
@@ -70,7 +70,7 @@ footer {
 .text-header {
   font-size: 1.2rem;
   line-height: 1.5rem;
-  overflow:visible;
+  overflow: visible;
   text-align: justify;
 }
 
