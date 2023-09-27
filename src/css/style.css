@@ -1,13 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
 header,
 footer {
-  display: block;
+  display: flex;
+  flex-direction: row;
   margin: 4px;
   padding: 5px;
-  min-height: 100px;
+  min-height: 200px;
   border: 1px solid #eebb55;
   border-radius: 7pt;
   background: #ffeebb;
 }
+
+.title-img {
+  background-image: url(/src/picture/main_image.webp);
+  background-size: cover;
+  max-width: 450px;
+  flex: 0 1 100%;
+}
+.map {
+  flex-direction: column;
+}
+.img-desc {
+  font-size: 1rem;
+  flex: 1 0 60%;
+  flex-direction: column;
+}
+
+.header-title {
+  flex: 1 0 60%;
+  flex-direction: column;
+}
+
+.climatedesc {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.text-header {
+  font-size: 1.2rem;
+}
+
 main {
   min-height: 800px;
   margin: 0;
@@ -15,6 +60,7 @@ main {
   display: flex;
   flex-direction: row;
 }
+
 main > article {
   margin: 4px;
   padding: 5px;
@@ -24,6 +70,7 @@ main > article {
   flex: 3 1 60%;
   order: 2;
 }
+
 main > nav,
 main > aside {
   margin: 4px;
@@ -34,24 +81,38 @@ main > aside {
   flex: 1 6 20%;
   order: 1;
 }
+
 main > aside {
   order: 3;
 }
 
 @media all and (max-width: 640px) {
+  .title-img {
+    flex: 0 0 60%;
+    flex-direction: column;
+    background-size: cover;
+  }
+
   main {
     flex-direction: column;
   }
+
+  header,
+  footer {
+    flex-direction: column;
+  }
+
   main > article,
   main > nav,
   main > aside {
     order: 0;
   }
+
   main > nav,
   main > aside,
   header,
   footer {
-    min-height: 50px;
-    max-height: 50px;
+    min-height: 150px;
+    max-height: 550px;
   }
 }
