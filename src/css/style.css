@@ -24,7 +24,7 @@ footer {
   background: #fcfbfb;
 }
 
-.title-img {
+.map__img {
   display: flex;
   background-image: url(/src/picture/main_image.webp);
   background-size: contain;
@@ -38,17 +38,18 @@ footer {
   display: flex;
   flex-direction: column;
 }
-.img-desc {
+.map__desc {
+  display: flex;
   font-size: 1rem;
   line-height: 1.2rem;
-  flex: 1 0 30%;
+  flex: 0 1 100%;
   flex-direction: column;
   text-align: center;
   margin: 4px;
   padding: 5px;
 }
 
-.header-title {
+.climatedesc__title {
   display: flex;
   flex: 0 1 60%;
   max-height: 100%;
@@ -67,17 +68,67 @@ footer {
   padding: 5px;
 }
 
-.text-header {
+.climatedesc__text {
   font-size: 1.2rem;
   line-height: 1.5rem;
   overflow: visible;
   text-align: justify;
 }
 
-.last-text-header {
+.climatedesc__last-text {
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-align: justify;
+}
+
+.article_wrapper {
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+.article_img {
+  display: flex;
+  background-image: url(/src/picture/ocean_heat.png);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 460px;
+  min-height: 300px;
+  flex: 0 1 100%;
+}
+
+.article_img-1 {
+  display: flex;
+  background-image: url(/src/picture/ecco_ohc.png);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 460px;
+  min-height: 300px;
+  flex: 0 1 100%;
+}
+
+.article_img-2 {
+  display: flex;
+  background-image: url(/src/picture/coral.jpeg);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 460px;
+  min-height: 300px;
+  flex: 0 1 100%;
+}
+
+.map__article {
+  display: flex;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  flex: 1 1 100%;
+  flex-direction: row;
+  text-align: center;
+  margin: 4px;
+  padding: 5px;
 }
 
 main {
@@ -93,9 +144,64 @@ main > article {
   padding: 5px;
   border: 1px solid #cccc33;
   border-radius: 7pt;
-  background-color: #dddd88;
+  background-color: #f6f6f6;
   flex: 3 1 60%;
   order: 2;
+}
+
+.article {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.article__title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.article__text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: justify;
+  align-self: stretch;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.article__subtitle {
+  display: flex;
+  font-weight: bold;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+  align-self: center;
+  justify-content: center;
+  color: #57a5e7;
+}
+
+.article__heading {
+  display: flex;
+  font-weight: bold;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.4rem;
+  align-self: flex-start;
+  justify-content: start;
+}
+
+.article__instruments {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 main > nav,
@@ -109,25 +215,31 @@ main > aside {
   order: 1;
 }
 
+.nav__wrapper {
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
 main > aside {
   order: 3;
 }
 
 @media all and (max-width: 768px) {
-  .title-img {
+  .map__img {
     display: flex;
     flex: 0 0 60%;
     flex-direction: column;
     background-size: contain;
   }
 
-  .text-header {
+  .climatedesc__text {
     display: flex;
     font-size: 1rem;
     align-content: center;
   }
 
-  .last-text-header {
+  .climatedesc__last-text {
     visibility: hidden;
   }
 
@@ -156,15 +268,21 @@ main > aside {
 }
 
 @media all and (max-width: 480px) {
-  .title-img {
-    display: flex;
-    flex: 0 0 60%;
-    flex-direction: column;
-    background-size: cover;
+  .map__img {
+    display: block;
+    background-size: contain;
+    max-width: 100%;
+    min-width: 75%;
+    background-position: 50%;
   }
 
-  .text-header {
+  .climatedesc__text {
     font-size: 1rem;
+    visibility: hidden;
+  }
+
+  .climatedesc__last-text {
+    visibility: hidden;
   }
 
   main {
