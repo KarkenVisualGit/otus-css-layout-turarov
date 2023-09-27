@@ -30,9 +30,8 @@ footer {
   background-size: contain;
   background-position: 50%;
   background-repeat: no-repeat;
-  min-width: 460px;
+  max-width: 100%;
   min-height: 300px;
-  flex: 0 1 100%;
 }
 .map {
   display: flex;
@@ -42,7 +41,6 @@ footer {
   display: flex;
   font-size: 1rem;
   line-height: 1.2rem;
-  flex: 0 1 100%;
   flex-direction: column;
   text-align: center;
   margin: 4px;
@@ -90,41 +88,37 @@ footer {
 .article_img {
   display: flex;
   background-image: url(/src/picture/ocean_heat.png);
-  background-size: 50%;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  min-width: 460px;
+  min-width: 100%;
   min-height: 300px;
-  flex: 0 1 100%;
 }
 
 .article_img-1 {
   display: flex;
   background-image: url(/src/picture/ecco_ohc.png);
-  background-size: 50%;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  min-width: 460px;
+  min-width: 100%;
   min-height: 300px;
-  flex: 0 1 100%;
 }
 
 .article_img-2 {
   display: flex;
   background-image: url(/src/picture/coral.jpeg);
-  background-size: 50%;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  min-width: 460px;
+  min-width: 100%;
   min-height: 300px;
-  flex: 0 1 100%;
 }
 
 .map__article {
   display: flex;
   font-size: 1rem;
   line-height: 1.2rem;
-  flex: 1 1 100%;
   flex-direction: row;
   text-align: center;
   margin: 4px;
@@ -217,7 +211,7 @@ main > aside {
 
 .nav__wrapper {
   width: 100%;
-  max-width: 1900px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -250,9 +244,8 @@ main > aside {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  min-width: 460px;
+  max-width: 100%;
   min-height: 300px;
-  flex: 0 1 100%;
 }
 
 .nav__img-1 {
@@ -261,9 +254,8 @@ main > aside {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  min-width: 460px;
+  max-width: 100%;
   min-height: 300px;
-  flex: 0 1 100%;
 }
 
 .nav__subtitle {
@@ -283,6 +275,63 @@ main > aside {
 
 main > aside {
   order: 3;
+}
+
+.aside__wrapper {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.aside__title {
+  font-size: 1.3rem;
+  line-height: 1.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.aside__fieldset {
+  font-size: 1.2rem;
+  border: 3px solid #3484ec;
+}
+
+.aside__subtitle {
+  display: flex;
+  font-weight: bold;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+  align-self: center;
+  justify-content: center;
+  color: #57a5e7;
+}
+
+.aside__img {
+  display: flex;
+  background-image: url(/src/picture/LandIceAntarctica.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  min-height: 300px;
+  flex: 0 1 100%;
+}
+
+.aside__img-1 {
+  display: flex;
+  background-image: url(/src/picture/LandIceGreenland.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  min-height: 300px;
+  flex: 0 1 100%;
+}
+
+.aside__text {
+  font-size: 1.2rem;
+  text-align: justify;
+  margin: 4px;
+  padding: 5px;
 }
 
 @media all and (max-width: 768px) {
@@ -370,6 +419,7 @@ main > aside {
   header,
   footer {
     min-height: 150px;
-    max-height: 650px;
+    height: 650px;
+    max-width: 100%;
   }
 }
