@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -18,6 +19,14 @@ module.exports = {
       template: path.resolve(__dirname, "./src/index.html"), // шаблон
       filename: "index.html", // название выходного файла
     }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, "./src/images"),
+    //       to: path.resolve(__dirname, "./prod/images"),
+    //     },
+    //   ],
+    // }),
   ],
   module: {
     rules: [
@@ -27,7 +36,24 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: "html-loader",
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              sources: {
+                list: [
+                  {
+                    tag: "source",
+                    attribute: "src",
+                    type: "src",
+                  },
+                ],
+              },
+              attrs: [":src"],
+            },
+          },
+        ],
       },
       {
         test: /\.js$/,
@@ -40,7 +66,26 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpe?g|png|gif|svg|webp|mp4)$/,
+        test: /\.(mp4|webm|ogv)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "videos/[hash][ext][query]",
+        },
+      },
+      // {
+      //   test: /\.mp4$/,
+      //   use: [
+      //     {
+      //       loader: "file-loader",
+      //       options: {
+      //         name: "[name].[ext]",
+      //         outputPath: "video"
+      //       }
+      //     }
+      //   ]
+      // },
+      {
+        test: /\.(jpe?g|png|gif|svg|webp)$/,
         type: "asset/inline",
         generator: {
           filename: "images/[name]-[contenthash][ext]",

@@ -69,7 +69,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpe?g|png|gif|svg|webp|mp4)$/i,
+        test: /\.(jpe?g|png|gif|svg|webp)$/i,
         type: "asset/inline",
         generator: {
           filename: "images/[name]-[contenthash][ext]",
