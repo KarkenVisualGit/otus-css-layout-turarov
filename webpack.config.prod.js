@@ -56,7 +56,23 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: "html-loader",
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              sources: {
+                list: [
+                  {
+                    tag: "source",
+                    attribute: "src",
+                    type: "src",
+                  },
+                ],
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.js$/,
@@ -69,8 +85,15 @@ module.exports = {
         },
       },
       {
+        test: /\.(mp4|webm|ogv)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "videos/[hash][ext][query]",
+        },
+      },
+      {
         test: /\.(jpe?g|png|gif|svg|webp)$/i,
-        type: "asset/inline",
+        type: "asset/resource",
         generator: {
           filename: "images/[name]-[contenthash][ext]",
         },

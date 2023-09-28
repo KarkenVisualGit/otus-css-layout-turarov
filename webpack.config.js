@@ -50,7 +50,6 @@ module.exports = {
                   },
                 ],
               },
-              attrs: [":src"],
             },
           },
         ],
@@ -86,7 +85,7 @@ module.exports = {
       // },
       {
         test: /\.(jpe?g|png|gif|svg|webp)$/,
-        type: "asset/inline",
+        type: "asset/resource",
         generator: {
           filename: "images/[name]-[contenthash][ext]",
         },

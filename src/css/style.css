@@ -189,7 +189,7 @@ main > article {
   line-height: 1.5rem;
   margin-bottom: 0.4rem;
   align-self: flex-start;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .article__instruments {
