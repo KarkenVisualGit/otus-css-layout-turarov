@@ -2,6 +2,8 @@
 *.log*
 .ssh/
 coverage
+/dist
+/prod
 node_modules
 
 # OS generated files
