@@ -1,9 +1,9 @@
 name: Deploy to GitHubPages
 on:
   push:
-    branches: ["otus-css-layout-turarov"]
+    branches: ["otus-css-layout"]
   pull_request:
-    branches: ["otus-css-layout-turarov"]
+    branches: ["otus-css-layout"]
 permissions:
   contents: write
 jobs:
