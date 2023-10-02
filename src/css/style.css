@@ -198,7 +198,7 @@ main > article {
   flex-direction: column;
 }
 
-main > nav,
+main > .highlight__wrapper,
 main > aside {
   margin: 4px;
   padding: 5px;
@@ -209,36 +209,36 @@ main > aside {
   order: 1;
 }
 
-.nav__wrapper {
+.highlight__wrapper {
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
 }
 
-.nav__arctic {
+.highlight__arctic {
   font-size: 1.3rem;
   line-height: 1.2rem;
   text-align: center;
   margin-bottom: 10px;
 }
 
-.nav__fieldset {
+.highlight__fieldset {
   font-size: 1.2rem;
   border: 3px solid #3484ec;
 }
 
-.nav__field-text {
+.highlight__field-text {
   text-align: justify;
 }
 
-.nav__text {
+.highlight__text {
   font-size: 1.2rem;
   text-align: justify;
   margin: 4px;
   padding: 5px;
 }
 
-.nav__img {
+.highlight__img {
   display: flex;
   background-image: url(/src/picture/SeaIce.png);
   background-size: contain;
@@ -248,7 +248,7 @@ main > aside {
   min-height: 300px;
 }
 
-.nav__img-1 {
+.highlight__img-1 {
   display: flex;
   background-image: url(/src/picture/Arctic_sea_ice_age_1985-2022_v2.webp);
   background-size: contain;
@@ -258,7 +258,7 @@ main > aside {
   min-height: 300px;
 }
 
-.nav__subtitle {
+.highlight__subtitle {
   display: flex;
   font-weight: bold;
   flex-wrap: wrap;
@@ -268,7 +268,7 @@ main > aside {
   color: #57a5e7;
 }
 
-.nav__video {
+.highlight__video {
   max-width: 100%;
   min-height: 240px;
 }
@@ -293,6 +293,10 @@ main > aside {
 .aside__fieldset {
   font-size: 1.2rem;
   border: 3px solid #3484ec;
+}
+
+.aside__field-text {
+  text-align: justify;
 }
 
 .aside__subtitle {
@@ -408,23 +412,24 @@ main > aside {
     flex-direction: column;
   }
 
-  .nav__video {
+  .highlight__video {
     max-width: 100%;
     min-height: 240px;
   }
 
   main > article,
-  main > nav,
+  main > .highlight__wrapper,
   main > aside {
     order: 0;
   }
 
-  main > nav,
+  main > .highlight__wrapper,
   main > aside,
   header,
   footer {
     min-height: 100%;
     max-height: 100%;
+    margin: 0 auto;
   }
 
   .footer__wrapper {
@@ -468,18 +473,19 @@ main > aside {
   }
 
   main > article,
-  main > nav,
+  main > .highlight__wrapper,
   main > aside {
     order: 0;
   }
 
-  main > nav,
+  main > .highlight__wrapper,
   main > aside,
   header,
   footer {
     min-height: 150px;
     height: 650px;
     max-width: 100%;
+    margin: 0 auto;
   }
 
   .footer__img-container {
