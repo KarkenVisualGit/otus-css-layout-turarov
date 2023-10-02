@@ -242,7 +242,7 @@ main > article {
   flex-direction: column;
 }
 
-main > nav,
+main > .highlight__wrapper,
 main > aside {
   margin: 4px;
   padding: 5px;
@@ -253,36 +253,36 @@ main > aside {
   order: 1;
 }
 
-.nav__wrapper {
+.highlight__wrapper {
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
 }
 
-.nav__arctic {
+.highlight__arctic {
   font-size: 1.3rem;
   line-height: 1.2rem;
   text-align: center;
   margin-bottom: 10px;
 }
 
-.nav__fieldset {
+.highlight__fieldset {
   font-size: 1.2rem;
   border: 3px solid #3484ec;
 }
 
-.nav__field-text {
+.highlight__field-text {
   text-align: justify;
 }
 
-.nav__text {
+.highlight__text {
   font-size: 1.2rem;
   text-align: justify;
   margin: 4px;
   padding: 5px;
 }
 
-.nav__img {
+.highlight__img {
   display: flex;
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_4___});
   background-size: contain;
@@ -292,7 +292,7 @@ main > aside {
   min-height: 300px;
 }
 
-.nav__img-1 {
+.highlight__img-1 {
   display: flex;
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_5___});
   background-size: contain;
@@ -302,7 +302,7 @@ main > aside {
   min-height: 300px;
 }
 
-.nav__subtitle {
+.highlight__subtitle {
   display: flex;
   font-weight: bold;
   flex-wrap: wrap;
@@ -312,7 +312,7 @@ main > aside {
   color: #57a5e7;
 }
 
-.nav__video {
+.highlight__video {
   max-width: 100%;
   min-height: 240px;
 }
@@ -337,6 +337,10 @@ main > aside {
 .aside__fieldset {
   font-size: 1.2rem;
   border: 3px solid #3484ec;
+}
+
+.aside__field-text {
+  text-align: justify;
 }
 
 .aside__subtitle {
@@ -452,23 +456,24 @@ main > aside {
     flex-direction: column;
   }
 
-  .nav__video {
+  .highlight__video {
     max-width: 100%;
     min-height: 240px;
   }
 
   main > article,
-  main > nav,
+  main > .highlight__wrapper,
   main > aside {
     order: 0;
   }
 
-  main > nav,
+  main > .highlight__wrapper,
   main > aside,
   header,
   footer {
     min-height: 100%;
     max-height: 100%;
+    margin: 0 auto;
   }
 
   .footer__wrapper {
@@ -512,18 +517,19 @@ main > aside {
   }
 
   main > article,
-  main > nav,
+  main > .highlight__wrapper,
   main > aside {
     order: 0;
   }
 
-  main > nav,
+  main > .highlight__wrapper,
   main > aside,
   header,
   footer {
     min-height: 150px;
     height: 650px;
     max-width: 100%;
+    margin: 0 auto;
   }
 
   .footer__img-container {
@@ -545,7 +551,7 @@ main > aside {
     align-items: center;
   }
 }
-`, "",{"version":3,"sources":["webpack://./src/css/style.css"],"names":[],"mappings":"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","sourcesContent":["*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\n.wrapper {\n  width: 100%;\n  max-width: 1900px;\n  margin: 0 auto;\n}\n\nheader,\nfooter {\n  display: flex;\n  flex-direction: row;\n  margin: 4px;\n  padding: 5px;\n  min-height: 200px;\n  border: 1px solid #eebb55;\n  border-radius: 7pt;\n  background: #fcfbfb;\n}\n\n.map__img {\n  display: flex;\n  background-image: url(/src/picture/main_image.webp);\n  background-size: contain;\n  background-position: 50%;\n  background-repeat: no-repeat;\n  max-width: 100%;\n  min-height: 300px;\n}\n.map {\n  display: flex;\n  flex-direction: column;\n}\n.map__desc {\n  display: flex;\n  font-size: 1rem;\n  line-height: 1.2rem;\n  flex-direction: column;\n  text-align: center;\n  margin: 4px;\n  padding: 5px;\n}\n\n.climatedesc__title {\n  display: flex;\n  flex: 0 1 25%;\n  max-height: 100%;\n  min-height: 20%;\n  margin: 0 auto;\n  justify-content: space-around;\n  /* flex-direction: column; */\n  text-align: justify;\n}\n\n.climatedesc {\n  display: flex;\n  flex-wrap: nowrap;\n  flex-direction: column;\n  margin: 4px;\n  padding: 5px;\n}\n\n.climatedesc__text {\n  font-size: 1.2rem;\n  line-height: 1.5rem;\n  overflow: visible;\n  text-align: justify;\n}\n\n.climatedesc__last-text {\n  font-size: 1.2rem;\n  line-height: 1.5rem;\n  text-align: justify;\n}\n\n.article_wrapper {\n  width: 100%;\n  max-width: 1900px;\n  margin: 0 auto;\n}\n\n.article_img {\n  display: flex;\n  background-image: url(/src/picture/ocean_heat.png);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  min-width: 100%;\n  min-height: 300px;\n}\n\n.article_img-1 {\n  display: flex;\n  background-image: url(/src/picture/ecco_ohc.png);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  min-width: 100%;\n  min-height: 300px;\n}\n\n.article_img-2 {\n  display: flex;\n  background-image: url(/src/picture/coral.jpeg);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  min-width: 100%;\n  min-height: 300px;\n}\n\n.map__article {\n  display: flex;\n  font-size: 1rem;\n  line-height: 1.2rem;\n  flex-direction: row;\n  text-align: center;\n  margin: 4px;\n  padding: 5px;\n}\n\nmain {\n  min-height: 800px;\n  margin: 0;\n  padding: 0;\n  display: flex;\n  flex-direction: row;\n}\n\nmain > article {\n  margin: 4px;\n  padding: 5px;\n  border: 1px solid #cccc33;\n  border-radius: 7pt;\n  background-color: #f6f6f6;\n  flex: 3 1 60%;\n  order: 2;\n}\n\n.article {\n  display: flex;\n  flex-wrap: nowrap;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-content: center;\n}\n\n.article__title {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n  align-content: center;\n  text-align: center;\n}\n\n.article__text {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  text-align: justify;\n  align-self: stretch;\n  font-size: 1.2rem;\n  line-height: 1.5rem;\n}\n\n.article__subtitle {\n  display: flex;\n  font-weight: bold;\n  flex-wrap: wrap;\n  margin-bottom: 0.4rem;\n  align-self: center;\n  justify-content: center;\n  color: #57a5e7;\n}\n\n.article__heading {\n  display: flex;\n  font-weight: bold;\n  flex-wrap: wrap;\n  font-size: 1.2rem;\n  line-height: 1.5rem;\n  margin-bottom: 0.4rem;\n  align-self: flex-start;\n  justify-content: flex-start;\n}\n\n.article__instruments {\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: column;\n}\n\nmain > nav,\nmain > aside {\n  margin: 4px;\n  padding: 5px;\n  border: 1px solid #8888bb;\n  border-radius: 7pt;\n  background: #dddddd;\n  flex: 1 6 20%;\n  order: 1;\n}\n\n.nav__wrapper {\n  width: 100%;\n  max-width: 640px;\n  margin: 0 auto;\n}\n\n.nav__arctic {\n  font-size: 1.3rem;\n  line-height: 1.2rem;\n  text-align: center;\n  margin-bottom: 10px;\n}\n\n.nav__fieldset {\n  font-size: 1.2rem;\n  border: 3px solid #3484ec;\n}\n\n.nav__field-text {\n  text-align: justify;\n}\n\n.nav__text {\n  font-size: 1.2rem;\n  text-align: justify;\n  margin: 4px;\n  padding: 5px;\n}\n\n.nav__img {\n  display: flex;\n  background-image: url(/src/picture/SeaIce.png);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  max-width: 100%;\n  min-height: 300px;\n}\n\n.nav__img-1 {\n  display: flex;\n  background-image: url(/src/picture/Arctic_sea_ice_age_1985-2022_v2.webp);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  max-width: 100%;\n  min-height: 300px;\n}\n\n.nav__subtitle {\n  display: flex;\n  font-weight: bold;\n  flex-wrap: wrap;\n  margin-top: 0.4rem;\n  align-self: center;\n  justify-content: center;\n  color: #57a5e7;\n}\n\n.nav__video {\n  max-width: 100%;\n  min-height: 240px;\n}\n\nmain > aside {\n  order: 3;\n}\n\n.aside__wrapper {\n  width: 100%;\n  max-width: 640px;\n  margin: 0 auto;\n}\n\n.aside__title {\n  font-size: 1.3rem;\n  line-height: 1.2rem;\n  text-align: center;\n  margin-bottom: 10px;\n}\n\n.aside__fieldset {\n  font-size: 1.2rem;\n  border: 3px solid #3484ec;\n}\n\n.aside__subtitle {\n  display: flex;\n  font-weight: bold;\n  flex-wrap: wrap;\n  margin-top: 0.4rem;\n  align-self: center;\n  justify-content: center;\n  color: #57a5e7;\n}\n\n.aside__img {\n  display: flex;\n  background-image: url(/src/picture/LandIceAntarctica.png);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  max-width: 100%;\n  min-height: 300px;\n  flex: 0 1 100%;\n}\n\n.aside__img-1 {\n  display: flex;\n  background-image: url(/src/picture/LandIceGreenland.png);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  max-width: 100%;\n  min-height: 300px;\n  flex: 0 1 100%;\n}\n\n.aside__text {\n  font-size: 1.2rem;\n  text-align: justify;\n  margin: 4px;\n  padding: 5px;\n}\n\n.footer__wrapper {\n  width: 100%;\n  max-width: 1900px;\n  margin: 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n}\n\n.footer__img-container {\n  flex: 0 1 25%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n\n.footer__img {\n  background-image: url(/src/picture/pia24105-1041_0.jpg);\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  max-width: 100%;\n  width: 300px;\n  height: 300px;\n  max-height: 100%;\n}\n\n.footer__desc {\n  text-align: center;\n  margin-top: 8px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  flex: 1 0 100%;\n}\n\n.footer__text {\n  margin: 4px;\n  padding: 5px;\n  text-align: justify;\n  font-size: 1.2rem;\n  line-height: 1.5rem;\n  flex: 0 1 25%;\n}\n\n@media all and (max-width: 768px) {\n  .map__img {\n    display: flex;\n    flex: 0 0 60%;\n    flex-direction: column;\n    background-size: contain;\n  }\n\n  .climatedesc__text {\n    display: flex;\n    font-size: 1rem;\n    align-content: center;\n  }\n\n  .climatedesc__last-text {\n    visibility: hidden;\n  }\n\n  main {\n    flex-direction: column;\n  }\n\n  header,\n  footer {\n    flex-direction: column;\n  }\n\n  .nav__video {\n    max-width: 100%;\n    min-height: 240px;\n  }\n\n  main > article,\n  main > nav,\n  main > aside {\n    order: 0;\n  }\n\n  main > nav,\n  main > aside,\n  header,\n  footer {\n    min-height: 100%;\n    max-height: 100%;\n  }\n\n  .footer__wrapper {\n    align-items: center;\n  }\n\n  .footer__img-container {\n    display: flex;\n    flex-wrap: nowrap;\n    align-content: center;\n    align-items: center;\n    justify-content: center;\n  }\n}\n\n@media all and (max-width: 480px) {\n  .map__img {\n    display: block;\n    background-size: contain;\n    max-width: 100%;\n    min-width: 75%;\n    background-position: 50%;\n  }\n\n  .climatedesc__text {\n    font-size: 1rem;\n    visibility: hidden;\n  }\n\n  .climatedesc__last-text {\n    visibility: hidden;\n  }\n\n  main {\n    flex-direction: column;\n  }\n\n  header,\n  footer {\n    flex-direction: column;\n  }\n\n  main > article,\n  main > nav,\n  main > aside {\n    order: 0;\n  }\n\n  main > nav,\n  main > aside,\n  header,\n  footer {\n    min-height: 150px;\n    height: 650px;\n    max-width: 100%;\n  }\n\n  .footer__img-container {\n    display: block;\n    text-align: center;\n    margin: 0 auto;\n  }\n\n  .footer__desc {\n    display: block;\n    text-align: center;\n  }\n\n  .footer__img {\n    margin: 0 auto;\n  }\n\n  .footer__wrapper {\n    align-items: center;\n  }\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/css/style.css"],"names":[],"mappings":"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","sourcesContent":["*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\n.wrapper {\n  width: 100%;\n  max-width: 1900px;\n  margin: 0 auto;\n}\n\nheader,\nfooter {\n  display: flex;\n  flex-direction: row;\n  margin: 4px;\n  padding: 5px;\n  min-height: 200px;\n  border: 1px solid #eebb55;\n  border-radius: 7pt;\n  background: #fcfbfb;\n}\n\n.map__img {\n  display: flex;\n  background-image: url(/src/picture/main_image.webp);\n  background-size: contain;\n  background-position: 50%;\n  background-repeat: no-repeat;\n  max-width: 100%;\n  min-height: 300px;\n}\n.map {\n  display: flex;\n  flex-direction: column;\n}\n.map__desc {\n  display: flex;\n  font-size: 1rem;\n  line-height: 1.2rem;\n  flex-direction: column;\n  text-align: center;\n  margin: 4px;\n  padding: 5px;\n}\n\n.climatedesc__title {\n  display: flex;\n  flex: 0 1 25%;\n  max-height: 100%;\n  min-height: 20%;\n  margin: 0 auto;\n  justify-content: space-around;\n  /* flex-direction: column; */\n  text-align: justify;\n}\n\n.climatedesc {\n  display: flex;\n  flex-wrap: nowrap;\n  flex-direction: column;\n  margin: 4px;\n  padding: 5px;\n}\n\n.climatedesc__text {\n  font-size: 1.2rem;\n  line-height: 1.5rem;\n  overflow: visible;\n  text-align: justify;\n}\n\n.climatedesc__last-text {\n  font-size: 1.2rem;\n  line-height: 1.5rem;\n  text-align: justify;\n}\n\n.article_wrapper {\n  width: 100%;\n  max-width: 1900px;\n  margin: 0 auto;\n}\n\n.article_img {\n  display: flex;\n  background-image: url(/src/picture/ocean_heat.png);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  min-width: 100%;\n  min-height: 300px;\n}\n\n.article_img-1 {\n  display: flex;\n  background-image: url(/src/picture/ecco_ohc.png);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  min-width: 100%;\n  min-height: 300px;\n}\n\n.article_img-2 {\n  display: flex;\n  background-image: url(/src/picture/coral.jpeg);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  min-width: 100%;\n  min-height: 300px;\n}\n\n.map__article {\n  display: flex;\n  font-size: 1rem;\n  line-height: 1.2rem;\n  flex-direction: row;\n  text-align: center;\n  margin: 4px;\n  padding: 5px;\n}\n\nmain {\n  min-height: 800px;\n  margin: 0;\n  padding: 0;\n  display: flex;\n  flex-direction: row;\n}\n\nmain > article {\n  margin: 4px;\n  padding: 5px;\n  border: 1px solid #cccc33;\n  border-radius: 7pt;\n  background-color: #f6f6f6;\n  flex: 3 1 60%;\n  order: 2;\n}\n\n.article {\n  display: flex;\n  flex-wrap: nowrap;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-content: center;\n}\n\n.article__title {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n  align-content: center;\n  text-align: center;\n}\n\n.article__text {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  text-align: justify;\n  align-self: stretch;\n  font-size: 1.2rem;\n  line-height: 1.5rem;\n}\n\n.article__subtitle {\n  display: flex;\n  font-weight: bold;\n  flex-wrap: wrap;\n  margin-bottom: 0.4rem;\n  align-self: center;\n  justify-content: center;\n  color: #57a5e7;\n}\n\n.article__heading {\n  display: flex;\n  font-weight: bold;\n  flex-wrap: wrap;\n  font-size: 1.2rem;\n  line-height: 1.5rem;\n  margin-bottom: 0.4rem;\n  align-self: flex-start;\n  justify-content: flex-start;\n}\n\n.article__instruments {\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: column;\n}\n\nmain > .highlight__wrapper,\nmain > aside {\n  margin: 4px;\n  padding: 5px;\n  border: 1px solid #8888bb;\n  border-radius: 7pt;\n  background: #dddddd;\n  flex: 1 6 20%;\n  order: 1;\n}\n\n.highlight__wrapper {\n  width: 100%;\n  max-width: 640px;\n  margin: 0 auto;\n}\n\n.highlight__arctic {\n  font-size: 1.3rem;\n  line-height: 1.2rem;\n  text-align: center;\n  margin-bottom: 10px;\n}\n\n.highlight__fieldset {\n  font-size: 1.2rem;\n  border: 3px solid #3484ec;\n}\n\n.highlight__field-text {\n  text-align: justify;\n}\n\n.highlight__text {\n  font-size: 1.2rem;\n  text-align: justify;\n  margin: 4px;\n  padding: 5px;\n}\n\n.highlight__img {\n  display: flex;\n  background-image: url(/src/picture/SeaIce.png);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  max-width: 100%;\n  min-height: 300px;\n}\n\n.highlight__img-1 {\n  display: flex;\n  background-image: url(/src/picture/Arctic_sea_ice_age_1985-2022_v2.webp);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  max-width: 100%;\n  min-height: 300px;\n}\n\n.highlight__subtitle {\n  display: flex;\n  font-weight: bold;\n  flex-wrap: wrap;\n  margin-top: 0.4rem;\n  align-self: center;\n  justify-content: center;\n  color: #57a5e7;\n}\n\n.highlight__video {\n  max-width: 100%;\n  min-height: 240px;\n}\n\nmain > aside {\n  order: 3;\n}\n\n.aside__wrapper {\n  width: 100%;\n  max-width: 640px;\n  margin: 0 auto;\n}\n\n.aside__title {\n  font-size: 1.3rem;\n  line-height: 1.2rem;\n  text-align: center;\n  margin-bottom: 10px;\n}\n\n.aside__fieldset {\n  font-size: 1.2rem;\n  border: 3px solid #3484ec;\n}\n\n.aside__field-text {\n  text-align: justify;\n}\n\n.aside__subtitle {\n  display: flex;\n  font-weight: bold;\n  flex-wrap: wrap;\n  margin-top: 0.4rem;\n  align-self: center;\n  justify-content: center;\n  color: #57a5e7;\n}\n\n.aside__img {\n  display: flex;\n  background-image: url(/src/picture/LandIceAntarctica.png);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  max-width: 100%;\n  min-height: 300px;\n  flex: 0 1 100%;\n}\n\n.aside__img-1 {\n  display: flex;\n  background-image: url(/src/picture/LandIceGreenland.png);\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n  max-width: 100%;\n  min-height: 300px;\n  flex: 0 1 100%;\n}\n\n.aside__text {\n  font-size: 1.2rem;\n  text-align: justify;\n  margin: 4px;\n  padding: 5px;\n}\n\n.footer__wrapper {\n  width: 100%;\n  max-width: 1900px;\n  margin: 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n}\n\n.footer__img-container {\n  flex: 0 1 25%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n\n.footer__img {\n  background-image: url(/src/picture/pia24105-1041_0.jpg);\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  max-width: 100%;\n  width: 300px;\n  height: 300px;\n  max-height: 100%;\n}\n\n.footer__desc {\n  text-align: center;\n  margin-top: 8px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  flex: 1 0 100%;\n}\n\n.footer__text {\n  margin: 4px;\n  padding: 5px;\n  text-align: justify;\n  font-size: 1.2rem;\n  line-height: 1.5rem;\n  flex: 0 1 25%;\n}\n\n@media all and (max-width: 768px) {\n  .map__img {\n    display: flex;\n    flex: 0 0 60%;\n    flex-direction: column;\n    background-size: contain;\n  }\n\n  .climatedesc__text {\n    display: flex;\n    font-size: 1rem;\n    align-content: center;\n  }\n\n  .climatedesc__last-text {\n    visibility: hidden;\n  }\n\n  main {\n    flex-direction: column;\n  }\n\n  header,\n  footer {\n    flex-direction: column;\n  }\n\n  .highlight__video {\n    max-width: 100%;\n    min-height: 240px;\n  }\n\n  main > article,\n  main > .highlight__wrapper,\n  main > aside {\n    order: 0;\n  }\n\n  main > .highlight__wrapper,\n  main > aside,\n  header,\n  footer {\n    min-height: 100%;\n    max-height: 100%;\n    margin: 0 auto;\n  }\n\n  .footer__wrapper {\n    align-items: center;\n  }\n\n  .footer__img-container {\n    display: flex;\n    flex-wrap: nowrap;\n    align-content: center;\n    align-items: center;\n    justify-content: center;\n  }\n}\n\n@media all and (max-width: 480px) {\n  .map__img {\n    display: block;\n    background-size: contain;\n    max-width: 100%;\n    min-width: 75%;\n    background-position: 50%;\n  }\n\n  .climatedesc__text {\n    font-size: 1rem;\n    visibility: hidden;\n  }\n\n  .climatedesc__last-text {\n    visibility: hidden;\n  }\n\n  main {\n    flex-direction: column;\n  }\n\n  header,\n  footer {\n    flex-direction: column;\n  }\n\n  main > article,\n  main > .highlight__wrapper,\n  main > aside {\n    order: 0;\n  }\n\n  main > .highlight__wrapper,\n  main > aside,\n  header,\n  footer {\n    min-height: 150px;\n    height: 650px;\n    max-width: 100%;\n    margin: 0 auto;\n  }\n\n  .footer__img-container {\n    display: block;\n    text-align: center;\n    margin: 0 auto;\n  }\n\n  .footer__desc {\n    display: block;\n    text-align: center;\n  }\n\n  .footer__img {\n    margin: 0 auto;\n  }\n\n  .footer__wrapper {\n    align-items: center;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1267,4 +1273,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.0fd65bde.js.map
+//# sourceMappingURL=main.7be31e79.js.map
