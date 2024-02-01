@@ -1,0 +1,509 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+header,
+footer {
+  display: flex;
+  flex-direction: row;
+  margin: 4px;
+  padding: 5px;
+  min-height: 200px;
+  border: 1px solid #eebb55;
+  border-radius: 7pt;
+  background: #fcfbfb;
+}
+
+.map__img {
+  display: flex;
+  background-image: url(/src/picture/main_image.webp);
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  min-height: 300px;
+}
+.map {
+  display: flex;
+  flex-direction: column;
+}
+.map__desc {
+  display: flex;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  flex-direction: column;
+  text-align: center;
+  margin: 4px;
+  padding: 5px;
+}
+
+.climatedesc__title {
+  display: flex;
+  flex: 0 1 25%;
+  max-height: 100%;
+  min-height: 20%;
+  margin: 0 auto;
+  justify-content: space-around;
+  /* flex-direction: column; */
+  text-align: justify;
+}
+
+.climatedesc {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin: 4px;
+  padding: 5px;
+}
+
+.climatedesc__text {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  overflow: visible;
+  text-align: justify;
+}
+
+.climatedesc__last-text {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+.article_wrapper {
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+.article_img {
+  display: flex;
+  background-image: url(/src/picture/ocean_heat.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 300px;
+}
+
+.article_img-1 {
+  display: flex;
+  background-image: url(/src/picture/ecco_ohc.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 300px;
+}
+
+.article_img-2 {
+  display: flex;
+  background-image: url(/src/picture/coral.jpeg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 300px;
+}
+
+.map__article {
+  display: flex;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  flex-direction: row;
+  text-align: center;
+  margin: 4px;
+  padding: 5px;
+}
+
+main {
+  min-height: 800px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+main > article {
+  margin: 4px;
+  padding: 5px;
+  border: 1px solid #cccc33;
+  border-radius: 7pt;
+  background-color: #f6f6f6;
+  flex: 3 1 60%;
+  order: 2;
+}
+
+.article {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.article__title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.article__text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: justify;
+  align-self: stretch;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.article__subtitle {
+  display: flex;
+  font-weight: bold;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+  align-self: center;
+  justify-content: center;
+  color: #57a5e7;
+}
+
+.article__heading {
+  display: flex;
+  font-weight: bold;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.4rem;
+  align-self: flex-start;
+  justify-content: flex-start;
+}
+
+.article__instruments {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+main > .highlight__wrapper,
+main > aside {
+  margin: 4px;
+  padding: 5px;
+  border: 1px solid #8888bb;
+  border-radius: 7pt;
+  background: #dddddd;
+  flex: 1 6 20%;
+  order: 1;
+}
+
+.highlight__wrapper {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.highlight__arctic {
+  font-size: 1.3rem;
+  line-height: 1.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.highlight__fieldset {
+  font-size: 1.2rem;
+  border: 3px solid #3484ec;
+}
+
+.highlight__field-text {
+  text-align: justify;
+}
+
+.highlight__text {
+  font-size: 1.2rem;
+  text-align: justify;
+  margin: 4px;
+  padding: 5px;
+}
+
+.highlight__img {
+  display: flex;
+  background-image: url(/src/picture/SeaIce.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.highlight__img-1 {
+  display: flex;
+  background-image: url(/src/picture/Arctic_sea_ice_age_1985-2022_v2.webp);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.highlight__subtitle {
+  display: flex;
+  font-weight: bold;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+  align-self: center;
+  justify-content: center;
+  color: #57a5e7;
+}
+
+.highlight__video {
+  max-width: 100%;
+  min-height: 240px;
+}
+
+main > aside {
+  order: 3;
+}
+
+.aside__wrapper {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.aside__title {
+  font-size: 1.3rem;
+  line-height: 1.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.aside__fieldset {
+  font-size: 1.2rem;
+  border: 3px solid #3484ec;
+}
+
+.aside__field-text {
+  text-align: justify;
+}
+
+.aside__subtitle {
+  display: flex;
+  font-weight: bold;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+  align-self: center;
+  justify-content: center;
+  color: #57a5e7;
+}
+
+.aside__img {
+  display: flex;
+  background-image: url(/src/picture/LandIceAntarctica.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  min-height: 300px;
+  flex: 0 1 100%;
+}
+
+.aside__img-1 {
+  display: flex;
+  background-image: url(/src/picture/LandIceGreenland.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  min-height: 300px;
+  flex: 0 1 100%;
+}
+
+.aside__text {
+  font-size: 1.2rem;
+  text-align: justify;
+  margin: 4px;
+  padding: 5px;
+}
+
+.footer__wrapper {
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__img-container {
+  flex: 0 1 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__img {
+  background-image: url(/src/picture/pia24105-1041_0.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  width: 300px;
+  height: 300px;
+  max-height: 100%;
+}
+
+.footer__desc {
+  text-align: center;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex: 1 0 100%;
+}
+
+.footer__text {
+  margin: 4px;
+  padding: 5px;
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  flex: 0 1 25%;
+}
+
+@media all and (max-width: 768px) {
+  .map__img {
+    display: flex;
+    flex: 0 0 60%;
+    flex-direction: column;
+    background-size: contain;
+  }
+
+  .climatedesc__text {
+    display: flex;
+    font-size: 1rem;
+    align-content: center;
+  }
+
+  .climatedesc__last-text {
+    visibility: hidden;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  header,
+  footer {
+    flex-direction: column;
+  }
+
+  .highlight__video {
+    max-width: 100%;
+    min-height: 240px;
+  }
+
+  main > article,
+  main > .highlight__wrapper,
+  main > aside {
+    order: 0;
+  }
+
+  main > .highlight__wrapper,
+  main > aside,
+  header,
+  footer {
+    min-height: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+  }
+
+  .footer__wrapper {
+    align-items: center;
+  }
+
+  .footer__img-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .map__img {
+    display: block;
+    background-size: contain;
+    max-width: 100%;
+    min-width: 75%;
+    background-position: 50%;
+  }
+
+  .climatedesc__text {
+    font-size: 1rem;
+    visibility: hidden;
+  }
+
+  .climatedesc__last-text {
+    visibility: hidden;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  header,
+  footer {
+    flex-direction: column;
+  }
+
+  main > article,
+  main > .highlight__wrapper,
+  main > aside {
+    order: 0;
+  }
+
+  main > .highlight__wrapper,
+  main > aside,
+  header,
+  footer {
+    min-height: 150px;
+    height: 650px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer__img-container {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .footer__desc {
+    display: block;
+    text-align: center;
+  }
+
+  .footer__img {
+    margin: 0 auto;
+  }
+
+  .footer__wrapper {
+    align-items: center;
+  }
+}
